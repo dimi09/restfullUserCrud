@@ -1,0 +1,23 @@
+To project user_crud είναι μια σύντομη εφαρμογή σε Spring boot, η οποία περιέχει 5 controllers που παρέχουν τις εξής δυνατότητες:
+	
+	-θα καταχωρεί έναν χρήστη.  Post (/user)
+	-θα μας φέρνει όλους τους χρήστες.  Get (user/all)
+	-θα μας κάνει update έναν χρήστη. Put (/user)
+	-θα μας κάνει delete έναν χρήστη. Delete (/user/{user_id})
+	-θα μας γυρνάει τους χρήστες που ανήκουν στην εταιρεία που ζητάμε από το request.  Get (/user/company/{company_name})
+
+Πριν τρέξουμε το project , θα πρέπει να φτιάξουμε μια database με το όνομα  - user_crud -  , εκτελώντας το query - CREATE DATABASE user_crud; - στην SQL , είτε μέσα από το αντίστοιχο εργαλείο στο σύστημα μας είτε απο το τερματικό.
+
+Κάνουμε Import το project στο IDE μας (Eclipse, Intellij , Netbeans etc)
+
+Ανοίγουμε το αρχείο application.properties (/userCrud/src/main/resources/application.properties)
+
+Θα χρειαστεί να βάλουμε τα στοιχεία μας για να γίνει η σύνδεση στο connection που μόλις φτιάξαμε την βάση user_crud :
+	spring.datasource.username = --> το όνομα χρήστη  
+	spring.datasource.password = --> τον κωδικό μας
+
+Ακολουθούμε την διαδρομή (/userCrud/src/main/java/com/repath/crud/example/UserCrudApplication.java) και τρέχουμε την main class : UserCrudApplication
+
+Αφού τρέξουμε την main class και η εφαρμογή τρέχει στον server στο 8080 port , αυτόματα δημιουργείτε στην βάση μας το table - user_tbl -
+
+Η εφαρμογή είναι έτοιμη για να διαχειριστεί τα ζητούμενα requests με την βοήθεια κάποιου προγράμματος όπως του Postman, στέλνοντας τα ανάλογα APIs
